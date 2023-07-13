@@ -5,7 +5,7 @@ product_name (название товара),
 manufacturer (производитель), 
 product_count (количество), 
 price (цена). 
-Заполните БД произвольными данными.*/
+Заполните БД произвольными данными.*/mobile_phone_table
 
 SELECT * 
 FROM levochka108_local_geekbrains.mobile_phone_table;
