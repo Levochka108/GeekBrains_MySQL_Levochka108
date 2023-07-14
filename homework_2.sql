@@ -155,6 +155,27 @@ CREATE TABLE cities(
 );
 
 
+-- Возвращение списка имен пользователей без повторений в алфавитном порядке
+
+SELECT DISTINCT firstname
+FROM users
+ORDER BY firstname;
+
+-- Вывод количества мужчин старше 35 лет
+
+SELECT COUNT(*) AS count
+FROM profiles
+JOIN users ON profiles.user_id = users.id
+WHERE gender = 'M' AND birthday <= DATE_SUB(CURDATE(), INTERVAL 35 YEAR);
+
+-- Подсчет заявок в друзья в каждом статусе
+
+SELECT `status`, COUNT(*) AS count
+FROM friend_requests
+GROUP BY `status`;
+
+
+
 use vk;
 
 INSERT INTO users (id, firstname, lastname, email, phone)
